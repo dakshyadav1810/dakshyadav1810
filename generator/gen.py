@@ -209,11 +209,11 @@ def bare(w, h, label):
 def intro(c, uid):
     text = ("Software and AI engineer, B.Tech. at IIT Kharagpur (class of 2027). Founder of Gimbal (formerly Axiom), "
             "an open-source self-healing testing platform. Previously at Emora Health (New York) and Wed-E.")
-    lines = textwrap.wrap(text, 132)
-    h = 26 + 26 * len(lines)
+    lines = textwrap.wrap(text, 108)
+    h = 30 + 30 * len(lines)
     s = bare(1000, h, text)
     for i, ln in enumerate(lines):
-        s += (f'<text x="32" y="{30+i*26}" font-family="{SANS}" font-size="16" fill="{c["ink"]}">{esc(ln)}</text>')
+        s += (f'<text x="32" y="{32+i*30}" font-family="{SERIF}" font-size="19" fill="{c["ink"]}">{esc(ln)}</text>')
     return s + '</svg>'
 
 
